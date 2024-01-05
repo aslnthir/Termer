@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "ES2018",
+    "lib": [
+      "ES2018",
+      "esnext.array",
+      "dom"
+    ],
+    "module": "esNext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "*": ["node_modules/*"]
+    }
+  },
+  "files": [
+    "types/patchinko.d.ts",
+    "types/flyd-debouncetime.d.ts",
+    "src/termer.ts"
+  ]
+}

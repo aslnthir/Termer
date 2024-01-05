@@ -1,0 +1,45 @@
+version: "3.7"
+services:
+  mongodb:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - db:/data/db
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: example
+  api_server:
+    image: $ECB_BACKEND_IMAGE
+    ports:
+      - 6000
+    networks:
+      - traefik-public
+      - default
+    environment:
+      ECB_MONGODB_SERVER: mongodb://mongodb:27017
+      ECB_BACKEND_PORT: 6000
+      ECB_BACKEND_CACHE_DIR: /var/cache/ecb/
+      NODE_ENV: $NODE_ENV
+    volumes:
+      - cache:/var/cache/ecb
+    deploy:
+      labels:
+       - traefik.enable=true
+         # Create a router for the ecb domain.
+       - traefik.http.routers.${TRAEFIK_ROUTER}.rule=Host(`${ECB_BACKEND_DOMAIN}`)
+       - traefik.http.services.${TRAEFIK_ROUTER}.loadbalancer.server.port=6000
+         # Enable TLS for the router
+       - traefik.http.routers.${TRAEFIK_ROUTER}.tls=true
+       - traefik.http.routers.${TRAEFIK_ROUTER}.tls.certresolver=certbot
+         # Create a Headers middleware instance named cors which sets the
+         # access-control-allow-origin header.
+       - traefik.http.middlewares.cors.headers.accesscontrolalloworiginlist=*
+         # Apply the cors middleware to the router
+       - traefik.http.routers.${TRAEFIK_ROUTER}.middlewares=cors
+
+networks:
+  traefik-public:
+    external: true
+
+volumes:
+  cache:
+  db:

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+for name in logos/*.png; do
+  yarn exec -- vue-asset-generate -a $name -o public/pwa/$(basename $name .png)/img/icons/
+done

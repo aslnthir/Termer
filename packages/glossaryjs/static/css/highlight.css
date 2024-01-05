@@ -1,0 +1,41 @@
+/*
+ * Vertraulich
+ */
+
+termer-tag {
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  box-shadow: inset 0 -2.2px 0 #58b3c3;
+}
+termer-tag:focus {
+  outline: none
+}
+
+termer-tag.termer-hover,
+termer-tag.termer-focus:not([data-temp]) {
+  z-index: 1;
+  background-color: #fffde940;
+}
+
+termer-tag.termer-hover.termer-first,
+termer-tag.termer-focus.termer-first {
+  box-shadow: inset 0px -1px 0px 0px #18587b,
+              inset 1px 1px 0px 0px #18587b;
+}
+termer-tag.termer-hover.termer-middle,
+termer-tag.termer-focus.termer-middle {
+  box-shadow: inset 0px -1px 0px 0px #18587b,
+              inset 0px 1px 0px 0px #18587b;
+}
+termer-tag.termer-hover.termer-last,
+termer-tag.termer-focus.termer-last {
+  box-shadow: inset 0px -1px 0px 0px #18587b,
+              inset -1px 1px 0px 0px #18587b;
+}
+termer-tag.termer-hover.termer-first.termer-last,
+termer-tag.termer-focus.termer-first.termer-last {
+  box-shadow: inset 0px -1px 0px 0px #18587b,
+              inset 1px 1px 0px 0px #18587b,
+              inset -1px 1px 0px 0px #18587b;
+}

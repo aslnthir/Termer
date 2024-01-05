@@ -1,0 +1,178 @@
+/*
+ * Vertraulich
+ */
+.tingtun_edit_term_button:before {
+    font-size: 14pt;
+}
+li > div > .tingtun_edit_term_button {
+    display:inline;
+}
+span > div > div > .tingtun_edit_term_button {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+}
+
+.tingtun_make_text_bigger {
+    font-size: 11pt !important;
+    font-weight: bold;
+}
+
+.tingtun_footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    font-size: 30%;
+    padding-top: 5px;
+    padding-left: 10px;
+    border-top: 1px solid #000000 ;
+    background: #055e90;
+    color: #ffffff;
+}
+.added_popup_image {
+    max-width: 100%;
+    height: auto;
+}
+
+.tingtun_config {
+  border: 3px solid #18587b;
+  background-color: #fffde9;
+  display:none;
+  width:auto;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 100001;
+}
+
+.popup_body {
+  min-width: 22em;
+}
+
+/*
+@media(max-width: 600px) {
+  .popup_body {
+    width: 18em;
+  }
+}
+*/
+
+.display-none {
+  display: none !important;
+}
+
+.display-none-termer {
+  display: none !important;
+}
+
+/* XXX: to keep control of the style of the wrapper elements is a
+ * somewhat futile exercise. This can be solved in a better way using
+ * shadow DOM.
+ * */
+.iframe-container-outer,
+.iframe-container-inner {
+  width: initial;
+  border: initial;
+  border-radius: initial;
+  margin: initial;
+  padding: initial;
+  background: initial;
+  display: inline-block;
+  z-index: 100003;
+  opacity: 1
+}
+
+.iframe-container-outer.wien::after {
+  content: '';
+  position: absolute;
+  height: 110%;
+  z-index: -1;
+}
+
+.iframe-container-outer.wien::after,
+.iframe-container-outer.wien {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.iframe-container-outer {
+  white-space: nowrap;
+  background-color: #fffde9;
+  border-radius: 0.7em;
+  box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02), rgb(24, 88, 123) 0px 0px 0px 0.2em inset;
+  padding: 0.15em;
+  height: auto;
+  width: 0px;
+  overflow: hidden;
+}
+
+.iframe-container-outer.wien > .iframe-container-inner {
+  border-width: 0.50em;
+  border-radius: 0;
+  border-color: #c5f5f4;
+}
+
+.iframe-container-inner {
+  /* max-width: 25%; */
+  /* min-width: 15em; */
+  max-height: 90vh;
+  height: 0px;
+  /* subtract parent element padding */
+  --my-width: calc(450px - 2 * .15em);
+  --my-scale: 1;
+  /* fallback for IE11. Should be the same as my-width. */
+  width: calc(450px - 2 * .15em);
+  /* in other browsers, scale the width by the scale factor. */
+  width: calc(var(--my-width) * var(--my-scale));
+
+  border: none;
+  border-radius: 0.2em 0.2em 0.5em 0.5em;
+  overflow: hidden;
+
+  text-align: center;
+  vertical-align: middle;
+  visibility: visible;
+  opacity: 1;
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  box-sizing: initial;
+}
+
+@media (max-width: 450px) {
+  .iframe-container-inner {
+    width: calc(100vw - 2 * .15em)
+  }
+}
+
+.popup-transition {
+  transition-duration: 200ms;
+  transition-property: width, height;
+  transition-timing-function: linear;
+}
+
+#tingtun_tooltip {
+  z-index: 100002;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.left-right {
+  /* safari 6.1 */
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+
+  /* others */
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "dev": "NODE_ENV=development yarn run check-env && MINIMAL_OUTPUT=1 BUILD_SOURCEMAP=1 lerna run dev --parallel",
+    "build": "NODE_ENV=production yarn run check-env && lerna run build --no-progress",
+    "check-env": "node check-env.js"
+  },
+  "dependencies": {
+    "termer-core": "^1.0.0"
+  }
+}

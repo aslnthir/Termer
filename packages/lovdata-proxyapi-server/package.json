@@ -1,0 +1,35 @@
+{
+  "name": "lovdata-proxyapi-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tingtun AS",
+  "license": "AllRightsReserved",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "serve": "node index.js",
+    "test": "jest",
+    "rescrape-names": "MAX_FILE_AGE_SECONDS=999999999999999 node rescrape-names.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "got": "^11.1.1",
+    "jsdom": "^16.2.2",
+    "mongoose": "^5.9.12",
+    "nodemon": "^2.0.3",
+    "sanitize-filename": "^1.6.3"
+  },
+  "devDependencies": {
+    "common-tags": "^1.8.0",
+    "eslint": "^6.8",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.5.2"
+  }
+}

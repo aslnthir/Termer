@@ -1,0 +1,91 @@
+.TransOverlay {
+  text-align: center;
+  font-size: 12px;
+}
+
+#tingtun-termer-button {
+  display: inline-block;
+  position: relative;
+}
+
+#tingtun-termer-button, #tingtun-termer-button * {
+  box-sizing: border-box;
+}
+
+#tingtun-termer-button .tingtun_config_button {
+  height: 32px;
+  background-position: -46px -41px;
+  background-size: 242% 442%;
+  background-color: white;
+  color: #18587b;
+  border-radius: 0.4em;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: initial;
+  font-weight: bold;
+  font-family: Arial, "Sans Serif";
+  margin: 0px;
+  padding: 1px 6px;
+}
+
+#tingtun-termer-button .tingtun_config_button_active {
+  background: #18587b;
+  color: white;
+}
+
+#tingtun-termer-button .TransOverlay {
+  position: absolute;
+  top: 0px;
+  right: 5.5rem;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  background: white;
+  border-radius: .4em;
+  border: solid #18587b;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+#tingtun-termer-button .TermerLoader {
+  position: relative;
+  top: 0px;
+  width: 82px;
+  height: 10px;
+  z-index: 40;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}
+#tingtun-termer-button .spinner div {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: #333;
+  border-radius: 50%;
+  animation: move 3s infinite cubic-bezier(.2,.64,.81,.23);
+  margin: 0px;
+  padding: 0px;
+}
+#tingtun-termer-button .spinner div:nth-child(2) {
+  animation: move 3s infinite cubic-bezier(.2,.64,.81,.23);
+  animation-delay: 400ms;
+}
+#tingtun-termer-button .spinner div:nth-child(3) {
+  animation: move 3s infinite cubic-bezier(.2,.64,.81,.23);
+  animation-delay: 800ms;
+}
+#tingtun-termer-button .spinner div:nth-child(4) {
+  animation: move 3s infinite cubic-bezier(.2,.64,.81,.23);
+  animation-delay: 1000ms;
+}
+@keyframes move {
+  0% {left: 0%;}
+  75% {left:100%;}
+  100% {left:100%;}
+}
+#tingtun-termer-button .displayNone {
+  display: none;
+}

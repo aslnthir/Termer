@@ -1,0 +1,17 @@
+{
+  "name": "browser-backend",
+  "version": "1.0.0",
+  "description": "Browser backend for Termer",
+  "main": "src/main.js",
+  "module": "src/main.js",
+  "esnext": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "echo \" Error: no build command specified\" && exit 0",
+    "dev": "echo \" Error: no dev server specified\" && exit 0"
+  },
+  "author": "Tingtun AS",
+  "license": "UNLICENSED",
+  "dependencies": {
+  }
+}

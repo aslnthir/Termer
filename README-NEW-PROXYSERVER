@@ -1,0 +1,26 @@
+Steps to adding new proxy server.
+
+1. create new proxy server folder or copy existing one in packages
+
+2. Update package.json proxyserver
+
+3. Update .meta/docker-compose.yml file with new names.
+  - api_server
+  - environment
+  - labels
+
+4. Update .meta/Dockerfile
+
+5. Update src/constats.js
+  - port
+  - mongodbServer
+  - tmpDir
+
+6. Update root .gitlab-ci-yml
+  1. Variables
+  2. build - script
+  3. deploy proxy server
+
+7. Now create the proxy server as needed.
+
+Add your own needed local variables to .env

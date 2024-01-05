@@ -1,0 +1,26 @@
+{
+  "name": "domstol-juridisk-ordliste-proxyapi-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tingtun AS",
+  "license": "AllRightsReserved",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "serve": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "got": "^11.1.1",
+    "jsdom": "^16.2.2",
+    "mongoose": "^5.9.12",
+    "sanitize-filename": "^1.6.3"
+  },
+  "devDependencies": {
+    "common-tags": "^1.8.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3"
+  }
+}

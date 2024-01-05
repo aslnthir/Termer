@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- <script data-main="dist/termer" src="require.js"></script> -->
+<!-- <script type="module" src="dist/termer.js"></script> -->
+<!-- <script type="module" src="dist/es/termer.js"></script> -->
+<script>
+(async () => {
+  const { Termer, defaultBackendDescriptors } = await import('./dist/es/termer.js')
+  const t = window.termer = new Termer()
+  t._model.map(x => {
+    state.innerText = JSON.stringify(x, setToJson, 2)
+  })
+  t.availableBackendTypes.map(b => b.forEach(x => {
+    const b = defaultBackendDescriptors[x]
+    b.url = new URL('http://localhost:8000/glossary2/')
+    b.config.apiKeys.push('eieuapky')
+    t.addBackend(b)
+  }))
+  t.wordlist.map(x => console.log('wordlist', x))
+  t.search('eksplosiv')
+  t.search('german')
+
+  function setToJson(key, value) {
+    if (Array.isArray(value) && value.length > 10) {
+      value = value.slice(0, 10)
+      value.push('...(truncated)...')
+      return value
+    }
+    if (typeof value === 'object' && value instanceof Set) {
+      return [...value]
+    }
+    return value
+  }
+// apikey: eieuapky&options=[object Object]
+  // t.search('eksplosiv')
+  //t.backends.map(backends => {
+  //  console.log('backends:', backends)
+  //  Object.values(backends).map(backend => {
+  //    // backend.config.actions.addApiKey('eieuapky')
+  //    console.log('store:', backend.store)
+      //backend.sources.availableSources.map(x => console.log('available sources', x))
+      // backend.store.state.map(s => {
+      //   //console.log('state:', JSON.stringify(s))
+      //   state.innerText = JSON.stringify(s, null, 2)
+      // })
+      // backend.config.states.map(s => {
+      //   console.log('config state:', s)
+      //   config.innerText = JSON.stringify(s, null, 2)
+      // })
+      // const sourceId = 2
+      // backend.sources.source(sourceId) // returns a stream which is either empty or contains the source info.
+      //  .map(s => console.log('source info', s))
+  //  })
+  //})
+  // t.sources.source(sourceId) // the same but backend-agnostic, we don’t care about where it comes from.
+})()
+</script>
+<pre id="state"></pre>
+<pre id="config"></pre>

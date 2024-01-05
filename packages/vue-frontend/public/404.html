@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="preload" as="fetch" href="<%= VUE_APP_PUBLIC_PATH %>">
+    <title></title>
+    <script>
+      sessionStorage.redirect = location.href
+      location.replace('<%= VUE_APP_PUBLIC_PATH %>')
+    </script>
+    <meta http-equiv="refresh" content="0;URL=<%= VUE_APP_PUBLIC_PATH %>">
+  </head>
+  <body>
+  </body>
+</html>

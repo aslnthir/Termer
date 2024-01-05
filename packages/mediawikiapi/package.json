@@ -1,0 +1,15 @@
+{
+  "name": "mediawikiapi",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Tingtun AS",
+  "license": "AllRightsReserved",
+  "private": true,
+  "dependencies": {
+    "typescript": "^3.9"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "dev": "NODE_ENV=development yarn run build --watch"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lovdata-law-reference-regex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tingtun AS",
+  "license": "AllRightsReserved",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "babel-jest": "^25.5.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.5.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "named-regexp-groups": "^1.0.5"
+  }
+}

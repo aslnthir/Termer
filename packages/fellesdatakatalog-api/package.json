@@ -1,0 +1,21 @@
+{
+  "name": "fellesdatakatalog-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tingtun AS",
+  "license": "AllRightsReserved",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "build": "echo \" Error: no build command specified\" && exit 0",
+    "dev": "echo \" Error: no dev server specified\" && exit 0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "eslint": "^6.8.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.6"
+  }
+}

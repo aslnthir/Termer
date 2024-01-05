@@ -1,0 +1,79 @@
+{
+  "name": "eqcss",
+  "filename": "EQCSS.js",
+  "version": "1.9.2",
+  "description": "EQCSS is a CSS reprocessor that introduces Element Queries, Scoped CSS, selectors for parent, next, and previous elements to all browsers IE8 and up",
+  "homepage": "http://elementqueries.com",
+  "author": "Tommy Hodgins & Maxime Euzière",
+  "license": "MIT",
+  "keywords": [
+    "EQCSS",
+    "eqcss",
+    "element queries",
+    "element query",
+    "container queries",
+    "container query",
+    "scoped css",
+    "scoped styles",
+    "parent selector",
+    "js-in-css",
+    "JS in CSS",
+    "reprocessor",
+    "CSS reprocessor",
+    "adaptive",
+    "responsive",
+    "responsive design",
+    "responsive web design",
+    "element first",
+    "eq",
+    "elq",
+    "css",
+    "rwd",
+    "web-components",
+    "ui component",
+    "polyfill",
+    "plugin",
+    "IE8"
+  ],
+  "main": "EQCSS.js",
+  "files": [
+    "EQCSS.js",
+    "EQCSS.min.js",
+    "EQCSS-polyfills.js",
+    "EQCSS-polyfills.min.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eqcss/eqcss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eqcss/eqcss/issues"
+  },
+  "contributors": [
+    {
+      "name": "Tommy Hodgins",
+      "email": "tomhodgins@gmail.com",
+      "url": "http://tomhodgins.com"
+    },
+    {
+      "name": "Maxime Euzière",
+      "email": "maxime.euziere@gmail.com",
+      "url": "http://xem.github.io"
+    }
+  ],
+  "npmName": "eqcss",
+  "npmFileMap": [
+    {
+      "basePath": "/",
+      "files": [
+        "EQCSS.js",
+        "EQCSS.min.js",
+        "EQCSS-polyfills.js",
+        "EQCSS-polyfills.min.js"
+      ]
+    }
+  ]
+}

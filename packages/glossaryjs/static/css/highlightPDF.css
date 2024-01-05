@@ -1,0 +1,58 @@
+/*
+ * Vertraulich
+ */
+
+ .tingtun_label {
+   cursor: pointer;
+   pointer-events: auto;
+ }
+
+.tingtun_label,
+.termer-hover,
+.termer-focus:not([data-temp]) {
+  box-shadow: initial;
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 0.2em;
+  /* border-color: #18587b; */
+  border-color: #58b3c3;
+  border-radius: 0;
+  color: transparent;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.textLayer {
+  opacity: 1;
+}
+.textLayer ::selection {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+/* separate rule for prefixed version, otherwise the whole thing is ignored. */
+.textLayer ::-moz-selection {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.textLayer > div {
+  background-color: transparent;
+}
+
+.textLayer .highlight.selected {
+  background-color: rgba(0, 100, 0, 0.3)
+}
+
+.textLayer .highlight {
+  background-color: rgba(180, 0, 170, 0.3)
+}
+
+.termer_default_markup {
+
+
+  /* IF you want transparent background:
+  /*background: rgba(141,210,232,0.4);
+  /*background-color: #cdebf5; old blue background color*/
+}
+
+.underline {
+    box-shadow: 0 0px 0 transparent, inset 0 -2.2px 0 #58b3c3;
+}

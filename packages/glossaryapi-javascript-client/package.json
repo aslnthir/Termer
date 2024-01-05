@@ -1,0 +1,28 @@
+{
+  "name": "glossaryapi-client",
+  "version": "1.5.0",
+  "description": "JS API client for glossary",
+  "main": "src/api/index.js",
+  "module": "src/api/index.js",
+  "esnext": "src/api/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "echo \" Error: no build command specified\" && exit 0",
+    "dev": "echo \" Error: no dev server specified\" && exit 0"
+  },
+  "author": "Tingtun AS",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^6",
+    "eslint-config-standard": "^14",
+    "eslint-friendly-formatter": "^4",
+    "eslint-plugin-promise": "^4",
+    "eslint-plugin-standard": "^4",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-node": "^10"
+  },
+  "dependencies": {
+    "browser-backend": "^1.0.0",
+    "js-cookie": "^2.1.4"
+  }
+}

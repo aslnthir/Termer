@@ -1,0 +1,13 @@
+{
+  "name": "site-configurations",
+  "version": "1.0.0",
+  "description": "site configurations settings",
+  "main": "./src/site-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "echo \"Error: no test specified\" && exit 0",
+    "dev": "echo \"Error: no test specified\" && exit 0"
+  },
+  "dependencies": {
+  }
+}

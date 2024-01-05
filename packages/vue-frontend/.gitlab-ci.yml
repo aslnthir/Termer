@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+    - rm -r public  # preexisting public/ in repo.
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  # Gitlab Pages is branch-agnostic, it supports at most one deployment per project. Any branch that receives updates and triggers this job will overwrite the previous deployment.
+  # We can limit this job to run only on changes to master, like so:
+  # only:
+  #   - master
